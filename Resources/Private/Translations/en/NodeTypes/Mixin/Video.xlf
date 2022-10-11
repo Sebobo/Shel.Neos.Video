@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product="Shel.Neos.Video" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="groups.video">
+                <source>Video settings</source>
+            </trans-unit>
+            <trans-unit id="properties.videoId">
+                <source>Video ID</source>
+            </trans-unit>
+            <trans-unit id="properties.width">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="properties.thumbnail">
+                <source>Thumbnail</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

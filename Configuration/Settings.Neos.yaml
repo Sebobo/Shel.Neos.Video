@@ -1,0 +1,11 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          Shel.Neos.Video:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        Shel.Neos.Video: true
+

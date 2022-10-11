@@ -1,0 +1,18 @@
+prototype(Shel.Neos.Video:Content.YouTubeVideo) < prototype(Neos.Neos:ContentComponent) {
+    videoId = ${q(node).property('videoId')}
+    width = ${q(node).property('width')}
+    thumbnail = ${q(node).property('thumbnail')}
+    title = Neos.Neos:Editable {
+        property = 'title'
+        block = false
+    }
+    summary = Neos.Neos:Editable {
+        property = 'summary'
+    }
+    videoTitle = ${this.title ? String.stripTags(this.title) : 'Video'}
+
+    renderer = Shel.Neos.Video:Component.YouTubeVideo.Renderer {
+        @apply.props = ${props}
+        allowEdit = ${node.context.inBackend}
+    }
+}

@@ -1,0 +1,40 @@
+prototype(Shel.Neos.Video:Component.YouTubeVideo.Renderer) < prototype(Neos.Fusion:Component) {
+    allowEdit = false
+    videoId = ''
+    width = ''
+    title = ''
+    summary = ''
+    alternativeText = ''
+    thumbnail = null
+    inlineStyles = true
+    classNames = ${['shel-neos-video', 'shel-neos-video--youtube']}
+
+    renderer = afx`
+        <div class={props.classNames}>
+            <header @if.visible={props.title || props.allowEdit}>{props.title}</header>
+            <figure>
+                <a
+                    href={'https://www.youtube.com/watch?v=' + props.videoId}
+                    @if.hasVideo={props.videoId}
+                    title={I18n.translate('video.openInNewWindow', 'Open video in new window', [], 'Main', 'Shel.Neos.Video')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Neos.Neos:ImageTag
+                        asset={props.thumbnail}
+                        alt={props.alternativeText}
+                        attributes.width={props.thumbnail.width}
+                        attributes.height={props.thumbnail.height}
+                        @if.hasThumbnail={props.thumbnail}
+                    />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" @if.hasThumbnail={props.thumbnail}>
+                        <path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"/>
+                    </svg>
+                    {!props.thumbnail ? I18n.translate('video.openInNewWindow', 'Open video in new window', [], 'Main', 'Shel.Neos.Video') : ''}
+                </a>
+                <span @if.noVideo={!props.videoId}>No video ID</span>
+            </figure>
+            <summary @if.visible={props.summary || props.allowEdit}>{props.summary}</summary>
+        </div>
+    `
+}

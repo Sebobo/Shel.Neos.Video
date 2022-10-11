@@ -1,0 +1,38 @@
+:root {
+  --shel-neos-video-icon-size: 50px;
+  --shel-neos-video-icon-size-hover: 60px;
+  --shel-neos-video-icon-color: white;
+  --shel-neos-video-icon-color-hover: #fb0;
+}
+
+.shel-neos-video {
+
+}
+
+.shel-neos-video figure {
+  margin: 0;
+}
+
+.shel-neos-video a {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+.shel-neos-video svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--shel-neos-video-icon-size);
+  height: var(--shel-neos-video-icon-size);
+  color: var(--shel-neos-video-icon-color);
+  transition: color .1s ease-in-out, width .1s ease-in-out, height .1s ease-in-out;
+}
+
+.shel-neos-video a:hover svg {
+  color: var(--shel-neos-video-icon-color-hover);
+  width: var(--shel-neos-video-icon-size-hover);
+  height: var(--shel-neos-video-icon-size-hover);
+}

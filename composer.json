@@ -1,0 +1,25 @@
+{
+    "name": "shel/neos-video",
+    "type": "neos-plugin",
+    "description": "A GDPR compliant video nodetype for Neos CMS",
+    "license": "MIT",
+    "require": {
+        "neos/neos": "^7.3 || ^8.0 || @dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shel\\Neos\\Video\\": "Classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastian Helzle",
+            "email": "sebastian@helzle.it"
+        }
+    ],
+    "extra": {
+        "neos": {
+            "package-key": "Shel.Neos.Video"
+        }
+    }
+}

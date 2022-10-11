@@ -1,0 +1,5 @@
+prototype(Neos.Neos:Page) {
+    head.stylesheets.shelNeosVideo = afx`
+        <link rel="stylesheet" href={StaticResource.uri('Shel.Neos.Video', 'Public/video.css')} />
+    `
+}

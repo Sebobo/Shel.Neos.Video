@@ -1,0 +1,27 @@
+Shel.Neos.Video:Content.YouTubeVideo:
+  superTypes:
+    Neos.Neos:Content: true
+    Shel.Neos.Video:Mixin.Video: true
+  ui:
+    label: i18n
+    icon: youtube
+  properties:
+    title:
+      type: string
+      ui:
+        inline:
+          editorOptions:
+            placeholder: i18n
+            formatting:
+              h2: true
+              h3: true
+              h4: true
+    summary:
+      type: string
+      ui:
+        inline:
+          editorOptions:
+            placeholder: i18n
+            formatting:
+              strong: true
+              em: true
