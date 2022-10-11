@@ -6,6 +6,7 @@ Shel.Neos.Video:Mixin.Video:
       groups:
         video:
           label: i18n
+          icon: video
   properties:
     videoId:
       type: string
