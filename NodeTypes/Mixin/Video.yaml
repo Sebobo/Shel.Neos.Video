@@ -22,11 +22,3 @@ Shel.Neos.Video:Mixin.Video:
         inspector:
           group: video
           hidden: 'ClientEval: !node.properties.videoId'
-    # TODO: maxwidth and aspectratio are not yet implemented
-    width:
-      type: integer
-      ui:
-        label: i18n
-        reloadIfChanged: true
-        inspector:
-          group: video

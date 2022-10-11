@@ -8,9 +8,6 @@
             <trans-unit id="properties.videoId">
                 <source>Video ID</source>
             </trans-unit>
-            <trans-unit id="properties.width">
-                <source>Width</source>
-            </trans-unit>
             <trans-unit id="properties.thumbnail">
                 <source>Thumbnail</source>
             </trans-unit>
